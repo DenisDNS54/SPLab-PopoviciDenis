@@ -4,13 +4,13 @@ import java.util.List;
 import Clase.Author;
 class Book {
     private String title;
-    private Author author;
+    private List<Author> author;
     private TableOfContents tableOfContents;
     private List<Chapter> chapters;
 
     public Book(String title, Author author) {
         this.title = title;
-        this.author = author;
+        this.author = new ArrayList<>();
         this.tableOfContents = tableOfContents;
         this.chapters = new ArrayList<>();
     }
@@ -20,6 +20,8 @@ class Book {
     }
     public void print() {
         System.out.println("Clase.Book Title: " + title);
-        author.print();
+        for (Author a : author) {
+            a.print();
+        }
     }
 }
