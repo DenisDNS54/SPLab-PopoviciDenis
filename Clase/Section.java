@@ -3,7 +3,7 @@ package Clase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Section {
+public class Section implements Element{
     private String sectionTitle;
     private List<Element> elements;
 
@@ -14,6 +14,11 @@ public class Section {
 
     public void add(Element element) {
         elements.add(element);
+    }
+
+    @Override
+    public void remove(Element element) {
+
     }
 
     public Element get(int index) {
