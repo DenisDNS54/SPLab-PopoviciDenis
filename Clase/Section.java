@@ -3,27 +3,20 @@ package Clase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Table {
-    private String title;
-    private List<String> elements;
+public class Section {
+    private String sectionTitle;
+    private List<Element> elements;
 
-    public Table(String title) {
-        this.title = title;
+    public Section() {
+        this.sectionTitle = sectionTitle;
         this.elements = new ArrayList<>();
     }
 
-    public void print() {
-        System.out.println("Clase.Table Title: " + title);
-        for (String element : elements) {
-            System.out.println(element);
-        }
-    }
-
-    public void add(String element) {
+    public void add(Element element) {
         elements.add(element);
     }
 
-    public String get(int index) {
+    public Element get(int index) {
         if (index >= 0 && index < elements.size()) {
             return elements.get(index);
         }
@@ -35,4 +28,12 @@ public class Table {
             elements.remove(index);
         }
     }
+
+    public void print() {
+        System.out.println("Clase.Section Title: " + sectionTitle);
+        for (Element element : elements) {
+            element.print();
+        }
+    }
+
 }
