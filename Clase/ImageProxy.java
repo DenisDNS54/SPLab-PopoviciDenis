@@ -25,7 +25,7 @@ public class ImageProxy implements Element{
             // Simulăm încărcarea imaginii folosind Toolkit.getDefaultToolkit().getImage
             // Acesta este doar un exemplu simplu și trebuie să fie înlocuit cu o implementare reală de încărcare a imaginii
             if(reallmg == null){
-                reallmg= new Image(url) {
+                reallmg= new Image() {
                     @Override
                     public int getWidth(ImageObserver observer) {
                         return 0;

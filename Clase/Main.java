@@ -1,7 +1,7 @@
 package Clase;// Clasa "Clase.Author"
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         long startTime = System.currentTimeMillis();
         ImageProxy img1 = new ImageProxy("Pamela Anderson");
         ImageProxy img2 = new ImageProxy("Kim Kardashian");
