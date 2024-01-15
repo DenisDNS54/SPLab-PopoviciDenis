@@ -8,9 +8,6 @@ public class Image implements Element{
     private String url;
     private String imageName;
 
-    //public Image(String url) {
-      //  this.url = url;
-    //}
 
     public void print() {
         System.out.println("Clase.Image: " + url);
@@ -37,8 +34,9 @@ public class Image implements Element{
 
     private List<Image> images;
 
-    public Image() {
-        this.images = new ArrayList<>();
+    public Image(String imageName, String url) {
+        this.imageName = imageName;
+        this.url = url;
     }
 
     public void add(Image image) {
@@ -62,6 +60,11 @@ public class Image implements Element{
         for (Image image : images) {
             image.print();
         }
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitImage(this);
     }
 }
 

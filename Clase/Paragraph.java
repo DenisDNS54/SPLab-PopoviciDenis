@@ -70,4 +70,9 @@ public class Paragraph implements Element {
     public String get() {
         return text;
     }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitParagraph(this);
+    }
 }

@@ -3,36 +3,43 @@ package Clase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Table {
+public class Table implements Element {
     private String title;
-    private List<String> elements;
+    private List<Element> elements;
 
     public Table(String title) {
         this.title = title;
         this.elements = new ArrayList<>();
     }
 
+    @Override
     public void print() {
         System.out.println("Clase.Table Title: " + title);
-        for (String element : elements) {
-            System.out.println(element);
+        for (Element element : elements) {
+            element.print();
         }
     }
 
-    public void add(String element) {
+    @Override
+    public void add(Element element) {
         elements.add(element);
     }
 
-    public String get(int index) {
+    @Override
+    public Element get(int index) {
         if (index >= 0 && index < elements.size()) {
             return elements.get(index);
         }
         return null;
     }
 
-    public void remove(int index) {
-        if (index >= 0 && index < elements.size()) {
-            elements.remove(index);
-        }
+    @Override
+    public void remove(Element element) {
+        elements.remove(element);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitTable(this);
     }
 }
