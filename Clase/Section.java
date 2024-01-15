@@ -7,7 +7,7 @@ public class Section implements Element{
     private String sectionTitle;
     private List<Element> elements;
 
-    public Section() {
+    public Section(String frontCover) {
         this.sectionTitle = sectionTitle;
         this.elements = new ArrayList<>();
     }

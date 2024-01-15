@@ -1,14 +1,14 @@
 package Clase;
 import java.util.ArrayList;
 import java.util.List;
-import Clase.Author;
+
 class Book extends Section{
     private String title;
     private List<Author> author;
     private TableOfContents tableOfContents;
 
     public Book(String title) {
-        super();
+        super("Front Cover");
         this.title = title;
         this.author = new ArrayList<>();
         this.tableOfContents = tableOfContents;

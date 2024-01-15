@@ -2,16 +2,27 @@ package Clase;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class Image implements Element{
     private String url;
+    private String imageName;
 
-    public Image(String url) {
-        this.url = url;
-    }
+    //public Image(String url) {
+      //  this.url = url;
+    //}
 
     public void print() {
         System.out.println("Clase.Image: " + url);
+    }
+
+    Image(String name) {
+        imageName = name;
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
