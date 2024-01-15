@@ -20,6 +20,7 @@ public class Paragraph implements Element {
     }
 
     // Modificarea metodei print pentru a folosi AlignStrategy
+    @Override
     public void print() {
         if (alignStrategy != null) {
             alignStrategy.render(this);

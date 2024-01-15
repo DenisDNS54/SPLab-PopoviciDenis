@@ -16,16 +16,11 @@ public class Main {
         System.out.println();
         cap1.print();
 
-        // Se presupune că alinierea a fost setată, dar nu face nimic conform output-ului dorit.
-        // Puteți comenta următoarele linii dacă alinierea nu este necesară pentru output-ul final.
+        // Set alignment strategies
         p1.setAlignStrategy(new AlignCenter());
         p2.setAlignStrategy(new AlignRight());
         p3.setAlignStrategy(new AlignLeft());
-
-        // Eliminăm toate paragrafele în afară de p4
-        cap1.remove(p1);
-        cap1.remove(p2);
-        cap1.remove(p3);
+        p4.setAlignStrategy(new AlignLeft()); // This line was added for consistency
 
         System.out.println();
         System.out.println("Printing with Alignment");
