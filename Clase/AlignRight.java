@@ -1,11 +1,13 @@
 package Clase;
 
-public abstract class AlignRight implements AlignStrategy {
-
+public class AlignRight implements AlignStrategy {
     @Override
-    public void render(Paragraph paragraph, Context context) {
-        // Logica de aliniere la dreapta
-        System.out.println("Aligned to the right: " + paragraph.get());
-        // ... cod suplimentar dacă este necesar
+    public void render(Paragraph paragraph) {
+        // Simulate right alignment with padding
+        String text = paragraph.getText();
+        int width = 80; // Assume a fixed width for alignment
+        int paddingLength = width - text.length();
+        String padding = String.format("%" + paddingLength + "s", "");
+        System.out.println(padding + text);
     }
 }

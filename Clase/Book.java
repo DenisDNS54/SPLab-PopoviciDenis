@@ -28,4 +28,7 @@ class Book extends Section{
     public void addContent(Element cap1) {
         super.add(cap1);
     }
+    public void accept(Visitor v) {
+        v.visitBook(this);
+    }
 }

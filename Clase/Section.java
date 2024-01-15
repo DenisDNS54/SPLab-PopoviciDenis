@@ -7,7 +7,7 @@ public class Section implements Element{
     private String sectionTitle;
     private List<Element> elements;
 
-    public Section(String frontCover) {
+    public Section(String sectionTitle) {
         this.sectionTitle = sectionTitle;
         this.elements = new ArrayList<>();
     }
@@ -16,10 +16,12 @@ public class Section implements Element{
         elements.add(element);
     }
 
+
     @Override
     public void remove(Element element) {
-
+        elements.remove(element);
     }
+
 
     public Element get(int index) {
         if (index >= 0 && index < elements.size()) {
@@ -40,5 +42,11 @@ public class Section implements Element{
             element.print();
         }
     }
-
+    @Override
+    public void accept(Visitor v) {
+        v.visitSection(this);
+        for(Element e : elements) {
+            e.accept(v);
+        }
+    }
 }
