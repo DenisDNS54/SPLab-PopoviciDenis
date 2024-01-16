@@ -1,5 +1,4 @@
 package Clase;
-
 public interface Element {
     void print();
     void add(Element element);
@@ -7,5 +6,3 @@ public interface Element {
     Element get(int index);
     public void accept(Visitor visitor);
 }
-
-
