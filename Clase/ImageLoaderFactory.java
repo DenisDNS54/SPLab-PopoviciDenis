@@ -1,5 +1,4 @@
 package Clase;
-
 public class ImageLoaderFactory {
     public ImageLoader create(String type) {
         if (type.equalsIgnoreCase("BMP")) {

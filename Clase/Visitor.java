@@ -1,5 +1,4 @@
 package Clase;
-
 public interface Visitor {
     public void visitBook(Book book);
     public void visitSection(Section section);
